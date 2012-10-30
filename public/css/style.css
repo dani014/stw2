@@ -1,0 +1,32 @@
+body
+{
+text-align: center;
+}
+
+h0
+{
+
+font-family: "Times New Roman", serif;
+font-style: italic;
+font-size:60px;
+}
+
+h1
+{
+border-style:solid;
+border-top-width:thin;
+border-right-width:medium;
+border-bottom-width:thick;
+border-left-width:10px;
+background-color: #A9BCF5;
+text-align:center;
+}
+
+h2
+{
+font-family: "Times New Roman", serif;
+font-style: italic;
+font-size:25px;
+}
+
+

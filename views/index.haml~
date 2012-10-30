@@ -1,0 +1,15 @@
+
+%img(HEIGHT = "300" WIDTH = "350" HSPACE=300 src = "http://spf.fotolog.com/photo/15/61/4/juanma_buitre/1200901747_f.jpg")
+%div(class="pull-center" style="position:absolute;left:790;top:450;")
+	%form(action="/" method="get")
+		%input(type="submit" value="Reset")
+%br
+%br
+%br
+%br
+%br
+#{@count = @count + 1}
+%h2 Computer chooses: #{@computer_throw}
+%h2 You choose: #{@player_throw}
+%h2 Numero de partida: #{@count}
+%h1 #{@answer}

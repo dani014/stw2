@@ -1,0 +1,15 @@
+%html
+	%head
+		%title Rock,PaperAndScissor
+		%link(rel="stylesheet" type="text/css" href="css/style.css")
+	%body
+		%h0
+			%b Rock, Paper and Scissor
+		= yield
+		%div(class="pull-center" style="position:absolute;left:590;top:450;")
+			%form(action ="/throw" method ="post")
+				%select(name="option")
+					%option(value="rock") Rock
+					%option(value="paper") Paper
+					%option(value="scissor") Scissor
+				%input(type="submit" value="Submit")
