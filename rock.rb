@@ -4,13 +4,15 @@ require 'haml'
 before do
   @defeat = { rock: :scissor, paper: :rock, scissor: :paper}
   @throws = @defeat.keys
-  if $count == nil
-     $count = 0
+  if ($winplayer and $wincomputer == nil)
+     $winplayer = 0
+     $wincomputer = 0
   end
 end
 
 get '/' do
-   $count = 0
+   $winplayer = 0
+   $wincomputer = 0
    haml :choice
 end
 
@@ -29,8 +31,10 @@ post '/throw' do
     @answer = "There is a tie"
   elsif @player_throw == @defeat[@computer_throw]
     @answer = "Computer wins; #{@computer_throw} defeats #{@player_throw}"
+    $wincomputer = $wincomputer + 1
   else
     @answer = "Well done. #{@player_throw} beats #{@computer_throw}"
+    $winplayer = $winplayer + 1
   end
   haml :index
 end
